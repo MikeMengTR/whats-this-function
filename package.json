@@ -1,0 +1,117 @@
+{
+  "name": "wtf",
+  "productName": "WTF",
+  "version": "0.1.0",
+  "description": "WTF — What's This Function? 双击 Ctrl，即刻解读任意代码。常驻系统托盘的桌面级代码解读小工具。",
+  "main": "dist/main/index.js",
+  "license": "MIT",
+  "author": {
+    "name": "WTF Contributors"
+  },
+  "homepage": "https://github.com/MikeMengTR/wtf#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MikeMengTR/wtf.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MikeMengTR/wtf/issues"
+  },
+  "keywords": [
+    "electron",
+    "code-explain",
+    "llm",
+    "deepseek",
+    "openai",
+    "tray",
+    "global-hotkey",
+    "double-tap-ctrl",
+    "code-tutor",
+    "developer-tool",
+    "wtf",
+    "whats-this-function"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json && node scripts/copy-renderer-deps.mjs",
+    "start": "npm run build && electron .",
+    "dev": "npm run build && electron .",
+    "icon": "node scripts/build-ico.mjs",
+    "pack": "npm run build && electron-builder --dir",
+    "dist": "npm run build && electron-builder",
+    "dist:win": "npm run build && electron-builder --win",
+    "dist:mac": "npm run build && electron-builder --mac",
+    "dist:linux": "npm run build && electron-builder --linux"
+  },
+  "dependencies": {
+    "electron-store": "^8.2.0",
+    "marked": "^18.0.3",
+    "uiohook-napi": "^1.5.5"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "electron": "^28.2.0",
+    "electron-builder": "^24.9.1",
+    "typescript": "^5.3.3"
+  },
+  "build": {
+    "appId": "com.wtf.app",
+    "productName": "WTF",
+    "copyright": "Copyright © 2026 WTF Contributors",
+    "asar": true,
+    "asarUnpack": [
+      "node_modules/uiohook-napi/**/*"
+    ],
+    "files": [
+      "dist/**/*",
+      "src/renderer/**/*",
+      "assets/icon.png",
+      "assets/icon.ico",
+      "assets/tray-icon.png",
+      "assets/tray-icon-disabled.png",
+      "package.json",
+      "!**/*.map",
+      "!scripts/**/*",
+      "!**/.{cache,DS_Store}"
+    ],
+    "directories": {
+      "output": "release",
+      "buildResources": "assets"
+    },
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": ["x64"]
+        }
+      ],
+      "icon": "assets/icon.ico",
+      "artifactName": "${productName}-Setup-${version}-${arch}.${ext}"
+    },
+    "mac": {
+      "target": [
+        {
+          "target": "dmg",
+          "arch": ["x64", "arm64"]
+        }
+      ],
+      "icon": "assets/icon.png",
+      "category": "public.app-category.developer-tools",
+      "artifactName": "${productName}-${version}-${arch}.${ext}"
+    },
+    "linux": {
+      "target": ["AppImage"],
+      "icon": "assets/icon.png",
+      "category": "Development",
+      "artifactName": "${productName}-${version}-${arch}.${ext}"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "WTF",
+      "installerIcon": "assets/icon.ico",
+      "uninstallerIcon": "assets/icon.ico"
+    }
+  }
+}
