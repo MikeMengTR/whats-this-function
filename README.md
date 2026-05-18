@@ -38,7 +38,7 @@
 ### 「详解」展开 ——拿到最小示例 + 参数表 + 易错点
 
 <p align="center">
-  <img src="figs/detail.png" alt="详解：示例 + 参数表 + 注意" width="420" />
+  <img src="figs/detail.png" alt="详解：示例 + 参数表 + 注意" width="780" />
 </p>
 
 > 点击「详解」窗口长高，显示**可复制粘贴运行**的最小示例 + 真实输出 + 参数表 + 非显然的坑。
@@ -46,7 +46,7 @@
 ### 「追问」对话 ——基于当前代码持续提问
 
 <p align="center">
-  <img src="figs/ask.png" alt="追问对话" width="420" />
+  <img src="figs/ask.png" alt="追问对话" width="780" />
 </p>
 
 > 底部输入框 Enter 发送，AI 流式回复，最多 10 轮对话。所有上下文都带着当前代码。
