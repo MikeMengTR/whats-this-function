@@ -8,13 +8,13 @@
   "author": {
     "name": "WTF Contributors"
   },
-  "homepage": "https://github.com/MikeMengTR/wtf#readme",
+  "homepage": "https://github.com/MikeMengTR/whats-this-function#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/MikeMengTR/wtf.git"
+    "url": "https://github.com/MikeMengTR/whats-this-function.git"
   },
   "bugs": {
-    "url": "https://github.com/MikeMengTR/wtf/issues"
+    "url": "https://github.com/MikeMengTR/whats-this-function/issues"
   },
   "keywords": [
     "electron",

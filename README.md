@@ -1,6 +1,6 @@
-# WTF
+# WTF: What's This Function?
 
-### What's This Function? · 这是什 码？
+### 这是什 码？
 
 > 双击 Ctrl，即刻解读任意代码。
 > 常驻系统托盘的桌面级代码解读小工具——选中代码，复制，双击 Ctrl，鼠标旁立刻弹出中文一句话速览与详解。
@@ -72,7 +72,7 @@
 
 ### 用户：从安装包
 
-1. 从 [Releases](https://github.com/MikeMengTR/wtf/releases) 下载对应平台安装包
+1. 从 [Releases](https://github.com/MikeMengTR/whats-this-function/releases) 下载对应平台安装包
    - Windows: `WTF-Setup-x.y.z-x64.exe`
    - macOS: `WTF-x.y.z-arm64.dmg`（或 x64）
    - Linux: `WTF-x.y.z-x86_64.AppImage`
@@ -98,7 +98,7 @@
 ### 开发者：从源码
 
 ```bash
-git clone https://github.com/MikeMengTR/wtf.git
+git clone https://github.com/MikeMengTR/whats-this-function.git
 cd wtf
 npm install
 npm start
