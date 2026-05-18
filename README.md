@@ -2,7 +2,7 @@
 
 ### 这是什 码？
 
-> 双击 Ctrl，即刻解读任意代码。
+> Ctrl C + 双击 Ctrl，即刻解读任意代码。
 > 常驻系统托盘的桌面级代码解读小工具——选中代码，复制，双击 Ctrl，鼠标旁立刻弹出中文一句话速览与详解。
 
 ![platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-blue)
